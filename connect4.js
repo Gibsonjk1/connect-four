@@ -85,7 +85,10 @@ function placeInTable(y, x) {
 /** endGame: announce game end */
 
 function endGame(msg) {
-	alert(msg);
+	setTimeout(function() {
+		alert(msg);
+	}, 1000);
+	document.getElementById('column-top').removeEventListener('click', handleClick);
 	return;
 	// TODO: pop up alert message
 }
